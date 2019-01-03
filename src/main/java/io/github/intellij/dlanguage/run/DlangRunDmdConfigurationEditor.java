@@ -159,6 +159,8 @@ public class DlangRunDmdConfigurationEditor extends SettingsEditor<DlangRunDmdCo
          * Add listener here. */
         final DlangRunDmdConfigurationType configurationType
             = Extensions.findExtension(ConfigurationType.CONFIGURATION_TYPE_EP, DlangRunDmdConfigurationType.class);
+        // todo: call the newer findExtensionOrFail method instead
+
         final ConfigurationFactory factory = configurationType.getConfigurationFactories()[0];
 
         addSettingsEditorListener(editor -> {
